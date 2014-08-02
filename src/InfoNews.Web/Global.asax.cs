@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
-using System.Web.Http;
-using Castle.Windsor;
-using Castle.Windsor.Installer;
-using InfoNews.Web.Windsor;
-using InfoNews.Web.Infrastructure.Windsor.Installers;
+﻿
 
 namespace InfoNews.Web
 {
+    using Castle.Windsor;
+    using Castle.Windsor.Installer;
+    using InfoNews.Web.Infrastructure.Windsor.Installers;
+    using InfoNews.Web.Windsor;
+    using System;
+    using System.Web;
+    using System.Web.Http;
+    using System.Web.Mvc;
+    using System.Web.Routing;
+
     public class Global : HttpApplication
     {
         private static IWindsorContainer _container;
