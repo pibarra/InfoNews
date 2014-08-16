@@ -1,6 +1,4 @@
-﻿
-
-namespace InfoNews.Web
+﻿namespace InfoNews.Web
 {
     using Castle.Windsor;
     using Castle.Windsor.Installer;
@@ -10,6 +8,7 @@ namespace InfoNews.Web
     using System.Web;
     using System.Web.Http;
     using System.Web.Mvc;
+    using System.Web.Optimization;
     using System.Web.Routing;
 
     public class Global : HttpApplication
@@ -22,6 +21,7 @@ namespace InfoNews.Web
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             InjectContainer();
         }
 
